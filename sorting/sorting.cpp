@@ -23,9 +23,11 @@ using namespace std;
 //9 14 15 12 6 8 13
 
 void insertionsort(int arr[],int n){
-    for(int i=0;i<n-1;i++){
-        while(n--){
-            
+    for(int i=0;i<n;i++){
+        int j=i;
+        while(j>0 && arr[j-1]>arr[j]){
+               swap(arr[j-1],arr[j]);
+               j--;
         }
     }
 }
@@ -38,7 +40,8 @@ int main(){
         for(int i=0;i<n;i++) cin>>arr[i];
         // bubblesort(arr,n);
         //selectionsort(arr,n);
+        insertionsort(arr,n);
         for(int i=0;i<n;i++) cout<<arr[i]<<" ";
         
 
-}
+} 
