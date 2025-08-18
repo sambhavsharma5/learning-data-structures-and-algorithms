@@ -7,7 +7,12 @@ void largest(int arr[],int n){
     {
         if(l<=arr[i]) l = arr[i];
     }
-    cout<<"largest element is "<<l;
+    int k;
+    for (int i = 0; i < n; i++)
+    {
+        if(k<=arr[i] && arr[i] != l ) k = arr[i];
+    }
+    cout<<"second largest element is "<<k;
 }
 int main(){
     freopen("input.txt","r",stdin);
